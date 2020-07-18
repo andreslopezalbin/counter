@@ -14,6 +14,7 @@ services:
         #     - "logsVolume:/usr/src/app/logs"
         environment: 
             - counterService=counter
+            - rateLimit=${RATE_LIMIT}
     counter:
         build: ./counter
         # networks: 
