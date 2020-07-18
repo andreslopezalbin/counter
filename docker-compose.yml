@@ -1,0 +1,31 @@
+version: '3.8'
+services: 
+    proxy:
+        build: ./proxy
+        # dockerfile: ./proxy/Dockerfile
+        ports: 
+            - "3000:8080"
+        # networks: 
+        #     service-tier:
+        # depends_on:
+        #     - counter
+        restart: on-failure
+        # volumes: 
+        #     - "logsVolume:/usr/src/app/logs"
+        environment: 
+            - counterService=counter
+            # - PORT=${PORT}
+            # - DBPORT=${DBPORT}
+            # - VIRTUAL_HOST=${VIRTUAL_HOST} #NECESARIO PARA PROXY
+            # - VIRTUAL_PORT=${PORT}
+    counter:
+        build: ./counter
+        # networks: 
+        #     service-tier:
+        # depends_on:
+        #     - counter
+        restart: on-failure
+
+# networks: 
+#     service-tier: 
+#             external: true
