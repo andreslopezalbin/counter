@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-const limit = 500;
+const limit = process.env.rateLimit || 500;
 let rate = 0;
 
 const limiter = (req, res, next) => {
