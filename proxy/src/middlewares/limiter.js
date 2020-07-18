@@ -4,8 +4,6 @@ const limit = 500;
 let rate = 0;
 
 const limiter = (req, res, next) => {
-    console.log('Limiter'+ moment().format());
-
     if (rate < limit) {
         rate += 1;
         next();
@@ -21,7 +19,7 @@ function intervalFunc() {
     rate = 0;
 }
 
-setInterval(intervalFunc, 30000);
+setInterval(intervalFunc, 1000);
 
 
 exports.limiter = limiter;

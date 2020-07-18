@@ -14,10 +14,6 @@ services:
         #     - "logsVolume:/usr/src/app/logs"
         environment: 
             - counterService=counter
-            # - PORT=${PORT}
-            # - DBPORT=${DBPORT}
-            # - VIRTUAL_HOST=${VIRTUAL_HOST} #NECESARIO PARA PROXY
-            # - VIRTUAL_PORT=${PORT}
     counter:
         build: ./counter
         # networks: 
