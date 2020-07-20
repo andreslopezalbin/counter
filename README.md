@@ -55,14 +55,14 @@ docker-compose up --build
 
 In order to test the proof of concept you can try in two different ways: single requests or massive requests. 
 
-### Single requets
+### Single requests
 
 To make single requests you can run the project and use the Postman collection located in the utils folder.
 Within this collection you will find three folders: one to test the counter MS in local (in AWS is private), other to test the proxy in local and the last one to test the proxy in AWS.
 
 To be able to test in AWS you need to change your hosts file and add `100.26.169.114 counter.aws` then just run the requests under `Proxy AWS`
 
-### Massive requets
+### Massive requests
 
 For this you can use `ab.exe` (Windows) located under the utils folder or install `apache2-utils` (Linux). Go to utils folder and then type the next commands:
 
