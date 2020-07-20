@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "713c702d-5246-4a63-aa8b-e1be7aae47ef",
+		"name": "Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Counter Local",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/counter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/counter",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"counter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/counter/inc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/counter/inc",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"counter",
+								"inc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Proxy Local",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/counter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/counter",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"counter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/counter/inc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/counter/inc",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"counter",
+								"inc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Proxy AWS",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "counter.aws:3000/",
+							"host": [
+								"counter",
+								"aws"
+							],
+							"port": "3000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/counter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "counter.aws:3000/api/v1/counter",
+							"host": [
+								"counter",
+								"aws"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"counter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/counter/inc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "counter.aws:3000/api/v1/counter/inc",
+							"host": [
+								"counter",
+								"aws"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"counter",
+								"inc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dee93725-7b85-464e-8d26-27511dcb7aa4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5a75aea2-3897-40f2-b82a-8ee4986da92f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
