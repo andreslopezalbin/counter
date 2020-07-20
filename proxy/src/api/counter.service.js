@@ -1,14 +1,12 @@
 const rp = require("request-promise");
 
-const counterURL = "http://" + (process.env.counterService || "localhost") + ":8080/api/";
+const counterURL = "http://" + (process.env.counterService || "localhost") + ":8081/api/";
 const counterAPIVersion = "v1";
 const counterGetEndPoint = "/counter";
 
 const getCounter = async (request, response) => {
-    console.log(counterURL + counterAPIVersion + counterGetEndPoint )
 
     try {
-
         await rp(counterURL + counterAPIVersion + counterGetEndPoint, function (error, res, body) {
             if (error) {
                 console.log(`Error retriving counter info: ${error}`);
@@ -16,7 +14,6 @@ const getCounter = async (request, response) => {
                 response.send(body);
             }
         });
-        return;
     } catch (err) {
         console.log(err)
         response.status(500).send({
@@ -40,7 +37,6 @@ const incCounter = async (request, response) => {
                 response.send(body);
             }
         })
-        return;
     } catch (err) {
         console.log(err)
         response.status(500).send({

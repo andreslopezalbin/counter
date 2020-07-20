@@ -9,7 +9,6 @@ const limiter = (req, res, next) => {
         next();
     } else {
         res.sendStatus(429);
-        return;
     }
 }
 

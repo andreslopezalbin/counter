@@ -2,7 +2,7 @@
 
 const express = require('express');
 const morgan = require('morgan');
-const serverPort = 8080;
+const serverPort = 8081;
 const version = '/api/v1';
 
 
@@ -23,11 +23,9 @@ app.post(version + '/counter/inc', (request, response) => {
     try {
         counter += 1;
         response.sendStatus(200)
-        return
     } catch (error) {
         console.log(error);
         response.sendStatus(500)
-        return
     }
 });
 
